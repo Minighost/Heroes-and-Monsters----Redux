@@ -1,13 +1,14 @@
 #BlueJ package file
-dependency1.from=Driver
-dependency1.to=Monster
+dependency1.from=Hero
+dependency1.to=Weapon
 dependency1.type=UsesDependency
-dependency2.from=Driver
-dependency2.to=Hero
+dependency2.from=Hero
+dependency2.to=Armor
 dependency2.type=UsesDependency
 dependency3.from=Driver
-dependency3.to=Farmer
+dependency3.to=Entity
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 dependency4.from=Driver
 dependency4.to=Potion
 dependency4.type=UsesDependency
@@ -18,26 +19,19 @@ editor.fx.0.height=722
 editor.fx.0.width=800
 editor.fx.0.x=320
 editor.fx.0.y=56
+=======
+>>>>>>> master
 objectbench.height=101
 objectbench.width=776
-package.divider.horizontal=0.6
-package.divider.vertical=0.8007380073800738
 package.editor.height=427
-package.editor.width=674
+package.editor.width=678
 package.editor.x=421
 package.editor.y=160
-package.frame.height=600
-package.frame.width=800
-package.numDependencies=5
+package.numDependencies=3
 package.numTargets=8
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
-readme.height=58
-readme.name=@README
-readme.width=47
-readme.x=10
-readme.y=10
 target1.height=50
 target1.name=Entity
 target1.showInterface=false
@@ -82,6 +76,13 @@ target5.typeParameters=
 target5.width=80
 target5.x=130
 target5.y=80
+<<<<<<< HEAD
+=======
+target6.editor.height=700
+target6.editor.width=900
+target6.editor.x=461
+target6.editor.y=180
+>>>>>>> master
 target6.height=50
 target6.name=Driver
 target6.naviview.expanded=true
