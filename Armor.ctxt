@@ -1,11 +1,10 @@
 #BlueJ class context
-comment0.target=Armor
-comment1.params=x\ y\ hp\ t
-comment1.target=Armor(int,\ int,\ int,\ java.lang.String)
-comment2.params=
-comment2.target=int\ getHP()
-comment3.params=newHP
-comment3.target=void\ setHP(int)
-comment4.params=
-comment4.target=java.lang.String\ toString()
-numComments=5
+comment0.params=x\ y\ hp\ t
+comment0.target=Armor(int,\ int,\ int,\ java.lang.String)
+comment1.params=
+comment1.target=int\ getHP()
+comment2.params=newHP
+comment2.target=void\ setHP(int)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
