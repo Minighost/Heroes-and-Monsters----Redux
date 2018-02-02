@@ -8,6 +8,19 @@ dependency2.type=UsesDependency
 dependency3.from=Driver
 dependency3.to=Entity
 dependency3.type=UsesDependency
+<<<<<<< HEAD
+dependency4.from=Driver
+dependency4.to=Potion
+dependency4.type=UsesDependency
+dependency5.from=Hero
+dependency5.to=Weapon
+dependency5.type=UsesDependency
+editor.fx.0.height=722
+editor.fx.0.width=800
+editor.fx.0.x=320
+editor.fx.0.y=56
+=======
+>>>>>>> master
 objectbench.height=101
 objectbench.width=776
 package.editor.height=427
@@ -67,10 +80,13 @@ target5.typeParameters=
 target5.width=80
 target5.x=130
 target5.y=80
+<<<<<<< HEAD
+=======
 target6.editor.height=700
 target6.editor.width=900
 target6.editor.x=461
 target6.editor.y=180
+>>>>>>> master
 target6.height=50
 target6.name=Driver
 target6.naviview.expanded=true

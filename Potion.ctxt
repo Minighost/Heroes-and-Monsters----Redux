@@ -1,10 +1,15 @@
 #BlueJ class context
-comment0.params=x\ y
-comment0.target=Potion(int,\ int)
-comment1.params=
-comment1.target=int\ getX()
+comment0.target=Potion
+comment1.params=x\ y\ potency
+comment1.target=Potion(int,\ int,\ int)
 comment2.params=
-comment2.target=int\ getY()
-comment3.params=
-comment3.target=java.lang.String\ toString()
-numComments=4
+comment2.target=int\ getX()
+comment3.params=x
+comment3.target=void\ setX(int)
+comment4.params=
+comment4.target=int\ getY()
+comment5.params=y
+comment5.target=void\ setY(int)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
