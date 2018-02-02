@@ -1,20 +1,30 @@
 public class Potion extends Entity{
-  	private int x, y;
-  
- 	public Potion(int x, int y){
- 	    this.x = x;
- 	    this.y = y;
-  	}
-  
+    private int x, y;
+    int potency;
+
+    public Potion(int x, int y, int potency){
+        this.x = x;
+        this.y = y;
+        this.potency = potency;
+    }
+
     public int getX(){
-      return this.x;
+        return this.x;
+    }
+    
+    public void setX(int x){
+        this.x = x;
     }
 
     public int getY(){
-      return this.y;
+        return this.y;
+    }
+    
+    public void setY(int y){
+        this.y = y;
     }
 
     public String toString(){
-      return "Potion";
+        return "Potion";
     }
 }
