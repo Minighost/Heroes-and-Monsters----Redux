@@ -1,6 +1,5 @@
 public class Driver{
     public static void main (String args[]){
-        System.out.println("Hello!");
+        int[][] map = new int[15][15];
     }
-    
 }

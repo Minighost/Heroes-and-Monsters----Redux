@@ -1,4 +1,4 @@
-public class Armor{
+public class Armor extends obj{
     private int hp;
     private int x, y;
     private String type;
