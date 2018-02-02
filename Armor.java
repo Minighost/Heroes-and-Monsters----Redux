@@ -1,4 +1,4 @@
-public class Armor extends entity{
+public class Armor extends Entity{
     private int hp;
     private int x, y;
     private String type;

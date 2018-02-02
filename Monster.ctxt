@@ -1,14 +1,15 @@
 #BlueJ class context
-comment0.params=x\ y\ h\ d\ n
-comment0.target=Monster(int,\ int,\ int,\ int,\ java.lang.String)
-comment1.params=
-comment1.target=int\ getHP()
-comment2.params=newHP
-comment2.target=void\ setHP(int)
-comment3.params=
-comment3.target=int\ getDMG()
+comment0.target=Monster
+comment1.params=x\ y\ h\ d\ n
+comment1.target=Monster(int,\ int,\ int,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=int\ getHP()
+comment3.params=newHP
+comment3.target=void\ setHP(int)
 comment4.params=
-comment4.target=java.lang.String\ getName()
-comment5.params=newName
-comment5.target=void\ setName(java.lang.String)
-numComments=6
+comment4.target=int\ getDMG()
+comment5.params=
+comment5.target=java.lang.String\ getName()
+comment6.params=newName
+comment6.target=void\ setName(java.lang.String)
+numComments=7

@@ -14,6 +14,7 @@ dependency4.type=UsesDependency
 dependency5.from=Hero
 dependency5.to=Weapon
 dependency5.type=UsesDependency
+<<<<<<< HEAD
 dependency6.from=Driver
 dependency6.to=entity
 dependency6.type=UsesDependency
@@ -27,14 +28,32 @@ package.editor.width=990
 package.editor.x=421
 package.editor.y=160
 package.numDependencies=7
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+objectbench.height=101
+objectbench.width=776
+package.divider.horizontal=0.6
+package.divider.vertical=0.8007380073800738
+package.editor.height=427
+package.editor.width=674
+package.editor.x=421
+package.editor.y=160
+package.frame.height=600
+package.frame.width=800
+package.numDependencies=5
+>>>>>>> Branch-1
 package.numTargets=8
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
-target1.editor.height=700
-target1.editor.width=900
-target1.editor.x=492
-target1.editor.y=178
+readme.height=58
+readme.name=@README
+readme.width=47
+readme.x=10
+readme.y=10
 target1.height=50
 target1.name=Potion
 target1.naviview.expanded=true
@@ -44,10 +63,13 @@ target1.typeParameters=
 target1.width=80
 target1.x=130
 target1.y=220
+<<<<<<< HEAD
 target2.editor.height=700
 target2.editor.width=900
 target2.editor.x=461
 target2.editor.y=180
+=======
+>>>>>>> Branch-1
 target2.height=50
 target2.name=Armor
 target2.naviview.expanded=true
@@ -57,10 +79,13 @@ target2.typeParameters=
 target2.width=80
 target2.x=130
 target2.y=360
+<<<<<<< HEAD
 target3.editor.height=700
 target3.editor.width=900
 target3.editor.x=492
 target3.editor.y=178
+=======
+>>>>>>> Branch-1
 target3.height=50
 target3.name=Monster
 target3.naviview.expanded=true
@@ -70,10 +95,13 @@ target3.typeParameters=
 target3.width=80
 target3.x=130
 target3.y=10
+<<<<<<< HEAD
 target4.editor.height=700
 target4.editor.width=900
 target4.editor.x=492
 target4.editor.y=178
+=======
+>>>>>>> Branch-1
 target4.height=50
 target4.name=Hero
 target4.naviview.expanded=true
@@ -83,10 +111,13 @@ target4.typeParameters=
 target4.width=80
 target4.x=130
 target4.y=80
+<<<<<<< HEAD
 target5.editor.height=1056
 target5.editor.width=1936
 target5.editor.x=-8
 target5.editor.y=-8
+=======
+>>>>>>> Branch-1
 target5.height=50
 target5.name=Driver
 target5.naviview.expanded=true
@@ -96,10 +127,13 @@ target5.typeParameters=
 target5.width=80
 target5.x=290
 target5.y=180
+<<<<<<< HEAD
 target6.editor.height=700
 target6.editor.width=900
 target6.editor.x=492
 target6.editor.y=178
+=======
+>>>>>>> Branch-1
 target6.height=50
 target6.name=Farmer
 target6.naviview.expanded=true
@@ -109,6 +143,7 @@ target6.typeParameters=
 target6.width=80
 target6.x=130
 target6.y=150
+<<<<<<< HEAD
 target7.editor.height=700
 target7.editor.width=900
 target7.editor.x=492
@@ -116,16 +151,25 @@ target7.editor.y=178
 target7.height=50
 target7.name=Weapon
 target7.naviview.expanded=true
+=======
+target7.height=50
+target7.name=entity
+>>>>>>> Branch-1
 target7.showInterface=false
-target7.type=ClassTarget
+target7.type=AbstractTarget
 target7.typeParameters=
 target7.width=80
+<<<<<<< HEAD
 target7.x=130
 target7.y=290
 target8.editor.height=700
 target8.editor.width=900
 target8.editor.x=492
 target8.editor.y=178
+=======
+target7.x=10
+target7.y=80
+>>>>>>> Branch-1
 target8.height=50
 target8.name=entity
 target8.naviview.expanded=true

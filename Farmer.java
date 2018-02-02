@@ -1,4 +1,4 @@
-public class Farmer extends entity{
+public class Farmer extends Entity{
     private int x, y;
     private String name;
     private String item;

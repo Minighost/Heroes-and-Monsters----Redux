@@ -1,4 +1,4 @@
-public class Hero extends entity{
+public class Hero extends Entity{
     private int x, y;
     private int hp, dmg;
     private String name;
