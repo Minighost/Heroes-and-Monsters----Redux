@@ -1,4 +1,4 @@
-public class Hero extends obj{
+public class Hero extends entity{
     private int x, y;
     private int hp, dmg;
     private String name;

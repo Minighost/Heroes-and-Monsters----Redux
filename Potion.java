@@ -1,4 +1,4 @@
-public class Potion extends obj{
+public class Potion extends entity{
   	private int x, y;
   
  	public Potion(int x, int y){

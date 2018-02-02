@@ -1,4 +1,4 @@
-public class Monster extends obj{
+public class Monster extends entity{
     private int x, y;
     private int hp;
     private int dmg;
