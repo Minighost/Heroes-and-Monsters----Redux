@@ -2,7 +2,6 @@ public class Driver{
     public static void main (String args[]){
         Entity[][] map = new Entity[15][15];
         
-<<<<<<< HEAD
         //12
         //15
         
@@ -11,7 +10,6 @@ public class Driver{
         
         
         // *****
-=======
         //55
         //66
         
@@ -20,6 +18,5 @@ public class Driver{
         
         
         //1212
->>>>>>> a8b045ff10da8d3551242af4b9cf3198a231e17c
     }
 }
