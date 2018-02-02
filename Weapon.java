@@ -1,4 +1,4 @@
-public class Weapon extends entity{
+public class Weapon extends Entity{
   	private int minDmg, maxDmg;
   	private int x, y;
   	
