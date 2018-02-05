@@ -5,6 +5,7 @@ public class Driver{
     public static void main (String args[]){
         Entity[][] map = new Entity[15][15];
         ArrayList<Entity> entityList = new ArrayList<Entity>();
+        int[][] takenCoord = new int[10][2];
         
         // Testing map printout
         for(int i = 0; i < 15; i++){
@@ -17,11 +18,14 @@ public class Driver{
         Armor leatherArmor = new Armor(0, 0, 20, "leather");
         Hero hero = new Hero(0, 0, dagger, leatherArmor);
         
-        //farmers?
+        Farmer farmer1 = new Farmer();
+        Farmer farmer2 = new Farmer();
         
-        //what items can farmers sell?
+        Weapon shortSword = new Weapon();
         
-        //how many farmers?
+        Potion potion1 = new Potion();
+        
+        Armor bronzeArmor = new Armor();
         
         //number of random weap/armor in map?
         
@@ -58,5 +62,21 @@ public class Driver{
             s = s + "\n\n";
         }
         System.out.println(s);
+    }
+    
+    public static void AttackSequence(Entity[][] map, Hero hero){
+        System.out.println("\f");
+        //x, y, hp, dmg, name
+        Monster monster = new Monster(hero.getX(), hero.getY(), 100, 20, "Skeleton");
+        System.out.println("A wild " + monster.getName() + " appeared!");
+        while(true){
+            break;
+        }
+    }
+    
+    public static void pressEnter(){
+        Scanner s = new Scanner(System.in);
+        System.out.print("Press Enter to continue...");
+        String str = s.nextLine();
     }
 }
