@@ -6,9 +6,10 @@ public class Driver{
         Entity[][] map = new Entity[15][15];
         ArrayList<Entity> entityList = new ArrayList<Entity>();
         
+        // Testing map printout
         for(int i = 0; i < 15; i++){
             for(int j = 0; j < 15; j++){
-                map[i][j] = null;
+                map[i][j] = new Air();
             }
         }
         //create obj
@@ -39,21 +40,23 @@ public class Driver{
         for(Entity[] r : map){
             for(Object i : r){
                 if((i.getClass().isInstance(new Hero()))){
-                    s = s + "Hero";
+                    s = s + "Hero\t";
                 }else if((i.getClass().isInstance(new Weapon()))){
-                    s = s + "Weapon";
+                    s = s + "Weapon\t";
                 }else if((i.getClass().isInstance(new Potion()))){
-                    s = s + "Potion";
+                    s = s + "Potion\t";
                 }else if((i.getClass().isInstance(new Armor()))){
-                    s = s + "Armor";
+                    s = s + "Armor\t";
                 }else if((i.getClass().isInstance(new Monster()))){
-                    s = s + "Monster";
+                    s = s + "Monster\t";
                 }else if((i.getClass().isInstance(new Farmer()))){
-                    s = s + "Farmer";
+                    s = s + "Farmer\t";
                 }else{
-                    s = s + "0";
+                    s = s + "0\t";
                 }
             }
+            s = s + "\n\n";
         }
+        System.out.println(s);
     }
 }
