@@ -1,6 +1,6 @@
 public class Hero extends Entity{
     private int x, y;
-    private int hp, dmg;
+    private int hp, dmg, hides;
     private String name;
     private Weapon weapon;
     private Armor armor;
@@ -12,6 +12,7 @@ public class Hero extends Entity{
         this.dmg = 10;
         this.weapon = new Weapon(0, 0, 1, 20);
         this.armor = a;
+        this.hides = 0;
     }
     
     public int getX(){
@@ -44,6 +45,14 @@ public class Hero extends Entity{
 
     public void setDMG(int newDMG){
         this.dmg = newDMG;
+    }
+    
+    public int getHides(){
+        return this.hides;
+    }
+    
+    public void setHides(int newHides){
+        this.hides = newHides;
     }
 
     public Weapon getWeapon(){
