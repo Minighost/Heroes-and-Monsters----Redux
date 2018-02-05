@@ -12,6 +12,22 @@ public class Monster extends Entity{
         this.name = n;
     }
     
+    public int getX(){
+        return this.x;
+    }
+    
+    public void setX(int newX){
+        this.x = newX;
+    }
+    
+    public int getY(){
+        return this.y;
+    }
+    
+    public void setY(int newY){
+        this.y = newY;
+    }
+    
     public int getHP(){
         return this.hp;
     }
