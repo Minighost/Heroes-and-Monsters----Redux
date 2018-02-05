@@ -4,6 +4,9 @@ public class Monster extends Entity{
     private int dmg;
     private String name;
     
+    public Monster(){
+    }
+    
     public Monster(int x, int y, int h, int d, String n){
         this.x = x;
         this.y = y;

@@ -1,12 +1,15 @@
 public class Weapon extends Entity{
-  	private int minDmg, maxDmg;
-  	private int x, y;
-  	
+    private int minDmg, maxDmg;
+    private int x, y;
+    
+    public Weapon(){
+    }
+    
     public Weapon(int x, int y, int minDmg, int maxDmg){
-      	this.minDmg = minDmg;
-      	this.maxDmg = maxDmg;
-      	this.x = x;
-      	this.y = y;
+        this.minDmg = minDmg;
+        this.maxDmg = maxDmg;
+        this.x = x;
+        this.y = y;
     }
   
     public int getMinDmg(){
@@ -43,5 +46,5 @@ public class Weapon extends Entity{
 
     public String toString(){
       return "Weapon";
-  	}
+    }
 }

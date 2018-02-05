@@ -2,6 +2,9 @@ public class Potion extends Entity{
     private int x, y;
     int potency;
 
+    public Potion(){
+    }
+    
     public Potion(int x, int y, int potency){
         this.x = x;
         this.y = y;

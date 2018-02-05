@@ -5,6 +5,10 @@ public class Hero extends Entity{
     private Weapon weapon;
     private Armor armor;
 
+    public Hero(){
+        
+    }
+    
     public Hero(int x, int y, Weapon w, Armor a){
         this.x = x;
         this.y = y;

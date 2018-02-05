@@ -2,6 +2,9 @@ public class Farmer extends Entity{
     private int x, y;
     private String name;
     
+    public Farmer(){
+    }
+    
     public Farmer(int x, int y, String n){
         this.x = x;
         this.y = y;

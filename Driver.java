@@ -30,5 +30,30 @@ public class Driver{
             Entity currentObj = entityList.get(i);
             map[currentObj.getY()][currentObj.getX()] = currentObj;
         }
+        
+        printMap(map);
+    }
+    
+    public static void printMap(Entity[][] map){
+        String s = "";
+        for(Entity[] r : map){
+            for(Object i : r){
+                if((i.getClass().isInstance(new Hero()))){
+                    s = s + "Hero";
+                }else if((i.getClass().isInstance(new Weapon()))){
+                    s = s + "Weapon";
+                }else if((i.getClass().isInstance(new Potion()))){
+                    s = s + "Potion";
+                }else if((i.getClass().isInstance(new Armor()))){
+                    s = s + "Armor";
+                }else if((i.getClass().isInstance(new Monster()))){
+                    s = s + "Monster";
+                }else if((i.getClass().isInstance(new Farmer()))){
+                    s = s + "Farmer";
+                }else{
+                    s = s + "0";
+                }
+            }
+        }
     }
 }

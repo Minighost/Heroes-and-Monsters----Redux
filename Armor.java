@@ -3,6 +3,10 @@ public class Armor extends Entity{
     private int x, y;
     private String type;
     
+    public Armor(){
+    }
+    
+    
     public Armor(int x, int y, int hp, String t){
         this.x = x;
         this.y = y;
