@@ -5,8 +5,11 @@ public class Driver{
     public static void main (String args[]){
         Entity[][] map = new Entity[15][15];
         ArrayList<Entity> entityList = new ArrayList<Entity>();
-        int[][] takenCoord = new int[10][2];
-        
+        int[][] takenCoord = new int[6][2];
+        int index = 0;
+        int newCoordX = 0;
+        int newCoordY = 0;
+
         // Testing map printout
         for(int i = 0; i < 15; i++){
             for(int j = 0; j < 15; j++){
@@ -16,29 +19,33 @@ public class Driver{
         //create obj
         Weapon dagger = new Weapon(0, 0, 1, 20);
         Armor leatherArmor = new Armor(0, 0, 20, "leather");
-        Hero hero = new Hero(0, 0, dagger, leatherArmor);
+        Hero hero = new Hero(15, 0, dagger, leatherArmor);
+        takenCoord[index][0] = hero.getX();
+        takenCoord[index][1] = hero.getY();
+        index++;
+
         
         Farmer farmer1 = new Farmer();
         Farmer farmer2 = new Farmer();
-        
+
         Weapon shortSword = new Weapon();
-        
+
         Potion potion1 = new Potion();
-        
+
         Armor bronzeArmor = new Armor();
-        
+
         //number of random weap/armor in map?
-        
+
         entityList.add(hero); //add all obj to list
-        
+
         for(int i = 0; i < entityList.size(); i++){ //set all obj to map
             Entity currentObj = entityList.get(i);
             map[currentObj.getY()][currentObj.getX()] = currentObj;
         }
-        
+
         printMap(map);
     }
-    
+
     public static void printMap(Entity[][] map){
         String s = "";
         for(Entity[] r : map){
@@ -56,24 +63,45 @@ public class Driver{
                 }else if((i.getClass().isInstance(new Farmer()))){
                     s = s + "Farmer\t";
                 }else{
-                    s = s + "0\t";
+                    s = s + ".\t";
                 }
             }
             s = s + "\n\n";
         }
         System.out.println(s);
     }
-    
+
     public static void AttackSequence(Entity[][] map, Hero hero){
         System.out.println("\f");
-        //x, y, hp, dmg, name
-        Monster monster = new Monster(hero.getX(), hero.getY(), 100, 20, "Skeleton");
+        //x, y, hp, level, name
+        String[] names = {"Skeleton", "Slime", "Zombie", "Witch", "Spider", "Giant", "Bug", "Crawler", "Alien"};
+        int tempHP = (int)Math.random()*90 + 20;
+        int level = (int)Math.random()*2 + 1;
+        String tempName = getRandomString(names);
+        Monster monster = new Monster(hero.getX(), hero.getY(), tempHP, level, tempName);
         System.out.println("A wild " + monster.getName() + " appeared!");
         while(true){
             break;
         }
     }
-    
+
+    public static boolean checkCoord(int[][] tc, int x, int y){
+        for(int i = 0; i < tc.length; i++){
+            int[] currentArray = tc[i];
+            if(currentArray[0] == x){
+                if(currentArray[1] == y){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static String getRandomString(String[] array) {
+        int rnd = new Random().nextInt(array.length);
+        return array[rnd];
+    }
+
     public static void pressEnter(){
         Scanner s = new Scanner(System.in);
         System.out.print("Press Enter to continue...");

@@ -1,17 +1,17 @@
 public class Monster extends Entity{
     private int x, y;
     private int hp;
-    private int dmg;
+    private int level;
     private String name;
     
     public Monster(){
     }
     
-    public Monster(int x, int y, int h, int d, String n){
+    public Monster(int x, int y, int h, int l, String n){
         this.x = x;
         this.y = y;
         this.hp = h;
-        this.dmg = d;
+        this.level = l;
         this.name = n;
     }
     
@@ -40,7 +40,7 @@ public class Monster extends Entity{
     }
     
     public int getDMG(){
-        return this.dmg;
+        return this.level;
     }
     
     public String getName(){
