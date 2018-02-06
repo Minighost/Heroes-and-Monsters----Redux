@@ -1,17 +1,17 @@
 public class Armor extends Entity{
     private int hp;
     private int x, y;
-    private String type;
+    private double dmgReduction = 0;
+    private String name;
     
     public Armor(){
     }
     
-    
-    public Armor(int x, int y, int hp, String t){
+    public Armor(int x, int y, double dmReduction, String name){
         this.x = x;
         this.y = y;
-        this.hp = hp;
-        this.type = t;
+        this.dmgReduction = dmgReduction;
+        this.name = name;
     }
     
     public int getX(){
@@ -30,15 +30,12 @@ public class Armor extends Entity{
         this.y = y;
     }
     
-    public int getHP(){
-        return this.hp;
-    }
-    
-    public void setHP(int newHP){
-        this.hp = newHP;
+    public int reduceDmg(int dmg){
+        int reducedDmg = (int)(dmg - (dmg * dmgReduction));
+        return reducedDmg;
     }
     
     public String toString(){
-        return "Type: " + this.type + "; Integrity: " + this.hp;
+        return "Name: " + this.name + "; Integrity: " + this.hp;
     }
 }
