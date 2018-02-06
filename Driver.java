@@ -17,8 +17,8 @@ public class Driver{
             }
         }
         //create obj
-        Weapon dagger = new Weapon(0, 0, 1, 20, "dagger");
-        Armor leatherArmor = new Armor(0, 0, 20, "leather");
+        Weapon dagger = new Weapon(0, 0, 1, 20, "Dagger");
+        Armor leatherArmor = new Armor(0, 0, 0, "Leather");
         Hero hero = new Hero(15, 0, dagger, leatherArmor);
         takenCoord[index][0] = hero.getX();
         takenCoord[index][1] = hero.getY();
@@ -49,7 +49,7 @@ public class Driver{
             newCoordX = (int)Math.random()*15;
             newCoordY = (int)Math.random()*15;
         }
-        Weapon shortSword = new Weapon(newCoordX, newCoordY, 20, 30, "short sword");
+        Weapon shortSword = new Weapon(newCoordX, newCoordY, 20, 30, "Shortsword");
         takenCoord[index][0] = newCoordX;
         takenCoord[index][1] = newCoordY;
         index++;
@@ -71,6 +71,16 @@ public class Driver{
         takenCoord[index][0] = newCoordX;
         takenCoord[index][1] = newCoordY;
         index++;
+        
+        while(checkCoord(takenCoord, newCoordX, newCoordY) == false){       //armor
+            newCoordX = (int)Math.random()*15;
+            newCoordY = (int)Math.random()*15;
+        }
+        Weapon shadowbane_curse = new Weapon(newCoordX, newCoordY, 30, 50, "Shadowbane's Curse");
+        takenCoord[index][0] = newCoordX;
+        takenCoord[index][1] = newCoordY;
+        index++;
+        
 
         //number of random weap/armor in map?
 
@@ -80,20 +90,17 @@ public class Driver{
         entityList.add(shortSword);
         entityList.add(potion1);
         entityList.add(bronzeArmor);
+        entityList.add(shadowbane_curse);
 
         for(int i = 0; i < entityList.size(); i++){ //set all obj to map
             Entity currentObj = entityList.get(i);
             map[currentObj.getY()][currentObj.getX()] = currentObj;
         }
 
-        while(true){
-            System.out.println("\f");
-
-            printMap(map);
-        }
+        System.out.println(printMap(map));
     }
 
-    public static void printMap(Entity[][] map){
+    public static String printMap(Entity[][] map){
         String s = "";
         for(Entity[] r : map){
             for(Object i : r){
@@ -115,7 +122,7 @@ public class Driver{
             }
             s = s + "\n\n";
         }
-        System.out.println(s);
+        return s;
     }
 
     public static void AttackSequence(Entity[][] map, Hero hero){
