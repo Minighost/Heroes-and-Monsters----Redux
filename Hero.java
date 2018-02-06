@@ -14,7 +14,7 @@ public class Hero extends Entity{
         this.y = y;
         this.hp = 100;
         this.dmg = 10;
-        this.weapon = new Weapon(0, 0, 1, 20);
+        this.weapon = w;
         this.armor = a;
         this.hides = 0;
     }

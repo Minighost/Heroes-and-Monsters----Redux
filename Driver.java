@@ -17,7 +17,7 @@ public class Driver{
             }
         }
         //create obj
-        Weapon dagger = new Weapon(0, 0, 1, 20);
+        Weapon dagger = new Weapon(0, 0, 1, 20, "dagger");
         Armor leatherArmor = new Armor(0, 0, 20, "leather");
         Hero hero = new Hero(15, 0, dagger, leatherArmor);
         takenCoord[index][0] = hero.getX();
@@ -73,6 +73,9 @@ public class Driver{
 
     public static void AttackSequence(Entity[][] map, Hero hero){
         System.out.println("\f");
+        
+        Scanner s = new Scanner(System.in);
+        
         //x, y, hp, level, name
         String[] names = {"Skeleton", "Slime", "Zombie", "Witch", "Spider", "Giant", "Bug", "Crawler", "Alien"};
         int tempHP = (int)Math.random()*90 + 20;
@@ -80,6 +83,33 @@ public class Driver{
         String tempName = getRandomString(names);
         Monster monster = new Monster(hero.getX(), hero.getY(), tempHP, level, tempName);
         System.out.println("A wild " + monster.getName() + " appeared!");
+        pressEnter();
+        while(true){
+            int choice = 0;
+            System.out.println("\f");
+            System.out.println("Your turn!\n");
+            System.out.println("1. Attack");
+            System.out.println("2. Run");
+            choice = s.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("Your " + hero.getWeapon().getName() + " slices out, cutting the monster!");
+                    int heroDMGdealt = (int)(Math.random()*hero.getWeapon().getMaxDmg() - hero.getWeapon().getMinDmg()) + hero.getWeapon().getMinDmg();
+                    System.out.println("\n---You dealt " + heroDMGdealt + " to the " + monster.getName() + "!---");
+                    monster.setHP(monster.getHP() - heroDMGdealt);
+                    break;
+                case 2:
+                    System.out.println("You run far away...");
+                    break;
+                default:
+                    System.out.println("something fcked up");
+                    break;
+            }
+            break;
+        }
+    }
+    
+    public static void doSomething(){
         while(true){
             break;
         }
