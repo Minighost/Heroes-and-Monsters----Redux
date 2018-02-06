@@ -24,26 +24,73 @@ public class Driver{
         takenCoord[index][1] = hero.getY();
         index++;
 
+        newCoordX = (int)Math.random()*15;
+        newCoordY = (int)Math.random()*15;
+
+        while(checkCoord(takenCoord, newCoordX, newCoordY) == false){       //farmer1
+            newCoordX = (int)Math.random()*15;
+            newCoordY = (int)Math.random()*15;
+        }
+        Farmer farmer1 = new Farmer(newCoordX, newCoordY, "Chuck");
+        takenCoord[index][0] = newCoordX;
+        takenCoord[index][1] = newCoordY;
+        index++;
         
-        Farmer farmer1 = new Farmer();
-        Farmer farmer2 = new Farmer();
-
-        Weapon shortSword = new Weapon();
-
-        Potion potion1 = new Potion();
-
-        Armor bronzeArmor = new Armor();
+        while(checkCoord(takenCoord, newCoordX, newCoordY) == false){       //farmer 2
+            newCoordX = (int)Math.random()*15;
+            newCoordY = (int)Math.random()*15;
+        }
+        Farmer farmer2 = new Farmer(newCoordX, newCoordY, "Bill");
+        takenCoord[index][0] = newCoordX;
+        takenCoord[index][1] = newCoordY;
+        index++;
+        
+        while(checkCoord(takenCoord, newCoordX, newCoordY) == false){       //weapon
+            newCoordX = (int)Math.random()*15;
+            newCoordY = (int)Math.random()*15;
+        }
+        Weapon shortSword = new Weapon(newCoordX, newCoordY, 20, 30, "short sword");
+        takenCoord[index][0] = newCoordX;
+        takenCoord[index][1] = newCoordY;
+        index++;
+        
+        while(checkCoord(takenCoord, newCoordX, newCoordY) == false){       //potion
+            newCoordX = (int)Math.random()*15;
+            newCoordY = (int)Math.random()*15;
+        }
+        Potion potion1 = new Potion(newCoordX, newCoordY, 50);
+        takenCoord[index][0] = newCoordX;
+        takenCoord[index][1] = newCoordY;
+        index++;
+        
+        while(checkCoord(takenCoord, newCoordX, newCoordY) == false){       //armor
+            newCoordX = (int)Math.random()*15;
+            newCoordY = (int)Math.random()*15;
+        }
+        Armor bronzeArmor = new Armor(newCoordX, newCoordY, 30, "bronze");
+        takenCoord[index][0] = newCoordX;
+        takenCoord[index][1] = newCoordY;
+        index++;
 
         //number of random weap/armor in map?
 
         entityList.add(hero); //add all obj to list
+        entityList.add(farmer1);
+        entityList.add(farmer2);
+        entityList.add(shortSword);
+        entityList.add(potion1);
+        entityList.add(bronzeArmor);
 
         for(int i = 0; i < entityList.size(); i++){ //set all obj to map
             Entity currentObj = entityList.get(i);
             map[currentObj.getY()][currentObj.getX()] = currentObj;
         }
 
-        printMap(map);
+        while(true){
+            System.out.println("\f");
+
+            printMap(map);
+        }
     }
 
     public static void printMap(Entity[][] map){
@@ -73,9 +120,9 @@ public class Driver{
 
     public static void AttackSequence(Entity[][] map, Hero hero){
         System.out.println("\f");
-        
+
         Scanner s = new Scanner(System.in);
-        
+
         //x, y, hp, level, name
         String[] names = {"Skeleton", "Slime", "Zombie", "Witch", "Spider", "Giant", "Bug", "Crawler", "Alien"};
         int tempHP = (int)Math.random()*90 + 20;
@@ -93,22 +140,22 @@ public class Driver{
             choice = s.nextInt();
             switch(choice){
                 case 1:
-                    System.out.println("Your " + hero.getWeapon().getName() + " slices out, cutting the monster!");
-                    int heroDMGdealt = (int)(Math.random()*hero.getWeapon().getMaxDmg() - hero.getWeapon().getMinDmg()) + hero.getWeapon().getMinDmg();
-                    System.out.println("\n---You dealt " + heroDMGdealt + " to the " + monster.getName() + "!---");
-                    monster.setHP(monster.getHP() - heroDMGdealt);
-                    break;
+                System.out.println("Your " + hero.getWeapon().getName() + " slices out, cutting the monster!");
+                int heroDMGdealt = (int)(Math.random()*hero.getWeapon().getMaxDmg() - hero.getWeapon().getMinDmg()) + hero.getWeapon().getMinDmg();
+                System.out.println("\n---You dealt " + heroDMGdealt + " to the " + monster.getName() + "!---");
+                monster.setHP(monster.getHP() - heroDMGdealt);
+                break;
                 case 2:
-                    System.out.println("You run far away...");
-                    break;
+                System.out.println("You run far away...");
+                break;
                 default:
-                    System.out.println("something fcked up");
-                    break;
+                System.out.println("something fcked up");
+                break;
             }
             break;
         }
     }
-    
+
     public static void doSomething(){
         while(true){
             break;

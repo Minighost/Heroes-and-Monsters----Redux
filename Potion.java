@@ -1,6 +1,6 @@
 public class Potion extends Entity{
     private int x, y;
-    int potency;
+    private int potency;
 
     public Potion(){
     }
@@ -25,6 +25,10 @@ public class Potion extends Entity{
     
     public void setY(int y){
         this.y = y;
+    }
+    
+    public int getPotency(){
+        return this.potency;
     }
 
     public String toString(){
