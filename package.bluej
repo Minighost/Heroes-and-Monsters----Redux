@@ -30,10 +30,13 @@ dependency9.from=Driver
 dependency9.to=Potion
 dependency9.type=UsesDependency
 <<<<<<< HEAD
+<<<<<<< HEAD
 editor.fx.0.height=722
 editor.fx.0.width=800
 editor.fx.0.x=320
 editor.fx.0.y=56
+=======
+>>>>>>> f8593fd8c6f9da246e20974878dae07494803b34
 =======
 >>>>>>> f8593fd8c6f9da246e20974878dae07494803b34
 objectbench.height=101
