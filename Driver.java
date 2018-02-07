@@ -16,6 +16,7 @@ public class Driver{
                 map[i][j] = new Air();
             }
         }
+        
         //create obj
         Weapon dagger = new Weapon(0, 0, 1, 20, "Dagger");
         Armor leatherArmor = new Armor(0, 0, 0, "Leather");
@@ -98,6 +99,7 @@ public class Driver{
         }
 
         System.out.println(printMap(map));
+        System.out.flush();
     }
 
     public static String printMap(Entity[][] map){
@@ -159,12 +161,6 @@ public class Driver{
                 System.out.println("something fcked up");
                 break;
             }
-            break;
-        }
-    }
-
-    public static void doSomething(){
-        while(true){
             break;
         }
     }
